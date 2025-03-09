@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+  </head>
+  <body>
+    <script>
+      var index = 1;
+      var tempImg = new Image();
+      tempImg.onload = function(){
+         appendImage();
+      }
+      var tryLoadImage = function( index ){
+         tempImg.src = 'pages/1-gallery/images/' + index + '.jpg';
+      }
+      var appendImage = function(){
+         var img = document.createElement('img');
+         img.src = tempImg.src;
+         document.body.appendChild( img )
+         tryLoadImage( index++ )
+      }
+      tryLoadImage( index );</script>
+  </body>
+</html>
