@@ -14,8 +14,8 @@
   <body>
     <a href="./index.html">Back</a>
     <script>
-      const fs = require('fs')
-      var index = fs.readdirSync('pages/1-gallery/images/').length
+      //const fs = require('fs')
+      var index = 1
       var tempImg = new Image();
       tempImg.onload = function(){
          appendImage();
@@ -30,7 +30,7 @@
          var br = document.createElement('br')
          document.body.appendChild( br )
          document.body.appendChild( img )
-         tryLoadImage( --index )
+         tryLoadImage( ++index )
       }
       tryLoadImage( index );</script>
   </body>
