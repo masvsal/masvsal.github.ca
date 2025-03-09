@@ -3,10 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .gallery-img {
+      height: 500px;
+      width: auto;
+      margin-right:10px
+  }</style>
     <title>My Website</title>
   </head>
   <body>
-    <a href="./index.html"></a>Back</a>
+    <a href="./index.html">Back</a>
     <script>
       var index = 1;
       var tempImg = new Image();
@@ -18,9 +24,12 @@
       }
       var appendImage = function(){
          var img = document.createElement('img');
+         img.classList.add('gallery-img');
          img.src = tempImg.src;
+         var br = document.createElement('br')
+         document.body.appendChild( br )
          document.body.appendChild( img )
-         tryLoadImage( index++ )
+         tryLoadImage( ++index )
       }
       tryLoadImage( index );</script>
   </body>
