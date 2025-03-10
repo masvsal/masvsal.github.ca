@@ -7,25 +7,9 @@
     <title>Gallery</title>
   </head>
   <body>
-    <a href="./index.html">Back</a>
-    <script>
-      var index = 1
-      var tempImg = new Image();
-      tempImg.onload = function(){
-         appendImage();
-      }
-      var tryLoadImage = function( index ){
-         tempImg.src = 'pages/1-gallery/images/2025_boston/' + index + '.JPG';
-      }
-      var appendImage = function(){
-         var img = document.createElement('img');
-         img.classList.add('gallery-img');
-         img.src = tempImg.src;
-         var br = document.createElement('br')
-         document.body.appendChild( br )
-         document.body.appendChild( img )
-         tryLoadImage( ++index )
-      }
-      tryLoadImage( index );</script>
+    <a href="./index.html">Home</a>
+    <table><tr><th>hello</th></tr></table>
+    <script src="populate-table.js">
+    </script>
   </body>
 </html>

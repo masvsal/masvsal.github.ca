@@ -1,9 +1,13 @@
 .gallery-img {
-    height: 500px;
-    width: auto;
-    margin-right:10px}
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;}
 
 .profile-img {
     height: 200px;
     width: auto;
     margin-right:10px}
+
+table {
+    text-align:center;
+}
